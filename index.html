@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="minDiv"> Hei alle sammen</div>
+    <button onclick="changeDiv('yellow',50,100,'God morgen')">Endre1</button>
+    <button onclick="changeDiv('black',100,200,'God kveld')">Endre2</button>
+    <button onclick="changeText()">Hade</button>
+
+    <script>
+        function changeDiv(color, width, height, tekst) {
+            document.getElementById('minDiv').innerHTML = tekst + /*HTML*/`
+            <div style="background-color:${color}; width:${width}%; height: ${height}px;">
+            `;
+        }
+        function changeText() {
+            document.getElementById('minDiv').innerHTML = 'Hade alle sammen';
+        }
+    </script>
+
+</body>
+
+</html>
